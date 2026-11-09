@@ -1,0 +1,38 @@
+[
+  {
+    "model": "Transfer Learning",
+    "rmse_mean": 13.173861118476024,
+    "rmse_std": 22.910376642912475,
+    "revenue_ratio_mean": 0.792237157467981,
+    "revenue_ratio_std": 0.27159918925442583,
+    "latency_mean_ms": 2.17421163994004,
+    "latency_std_ms": 0.23363889508475094
+  },
+  {
+    "model": "Multi-Task Learning",
+    "rmse_mean": 10.209495967036542,
+    "rmse_std": 15.510769284882109,
+    "revenue_ratio_mean": 0.8897881245505869,
+    "revenue_ratio_std": 0.19718263714923492,
+    "latency_mean_ms": 1.3261349596723448,
+    "latency_std_ms": 0.12957720272185383
+  },
+  {
+    "model": "Standard MAML",
+    "rmse_mean": 16.155252334537536,
+    "rmse_std": 27.83952442404632,
+    "revenue_ratio_mean": 0.5957726419339555,
+    "revenue_ratio_std": 0.36031089036753006,
+    "latency_mean_ms": 1.4609300401934888,
+    "latency_std_ms": 0.2635808784430314
+  },
+  {
+    "model": "MetaPrice",
+    "rmse_mean": 24.487557930414006,
+    "rmse_std": 42.18783704757154,
+    "revenue_ratio_mean": 0.5308458007968097,
+    "revenue_ratio_std": 0.3372278627744011,
+    "latency_mean_ms": 1.748750080150785,
+    "latency_std_ms": 0.3526894854198552
+  }
+]

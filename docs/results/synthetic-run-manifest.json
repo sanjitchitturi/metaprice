@@ -1,0 +1,119 @@
+{
+  "checkpoint_sha256": {
+    "attention_composer.pt": "f75509d33b54dab55be6d804a752b3ef61dc049baa0c1deed78e6d6e6ad5cc6b",
+    "learner_category_0.pt": "1c3f7ff9699a1b010df09d7b376b4046ba942ce3e7bd2f342291fd3a705be3c7",
+    "learner_elasticity_0.pt": "51d76c4e2a7207de9033d7f51610e84836cfd682c58d7ffabe689ff215e0a98e",
+    "learner_price_tier_0.pt": "bb46f008fc4bec1e7544cbc9e49024b645d0620bfa16c9a880009ff7e5890c67",
+    "multitask.pt": "9cc9b47ead03ba123688c00994494f151d39673abbd28ce42f568f4cedb6b16c",
+    "standard_maml.pt": "21316f0de844bd51e99bc068010a04e0a14dad6586038c7137189cac5a21a925",
+    "transfer_learning.pt": "22a4adcbdb4c294b98e8724d6d43560dbd9cc35b50af886d14db0457dcf03d54"
+  },
+  "configuration": {
+    "baselines": {
+      "maml": {
+        "epochs": 2,
+        "inner_lr": 0.01,
+        "inner_steps": 1,
+        "meta_batch": 10,
+        "outer_lr": 0.001
+      },
+      "multitask": {
+        "epochs": 2,
+        "finetune_lr": 0.01,
+        "finetune_steps": 5,
+        "lr": 0.001
+      },
+      "transfer": {
+        "finetune_lr": 0.001,
+        "finetune_steps": 10
+      }
+    },
+    "data": {
+      "min_pairs": 3,
+      "num_points": 50,
+      "support_size": 5
+    },
+    "device": "cpu",
+    "hierarchy": {
+      "categories": [
+        "Electronics",
+        "Storage",
+        "Stationery",
+        "Decorations",
+        "General"
+      ],
+      "elasticity": {
+        "high_threshold": -0.5,
+        "low_threshold": -0.2
+      },
+      "price_tiers": {
+        "budget_max": 2.0,
+        "midrange_max": 5.0
+      }
+    },
+    "meta": {
+      "grad_clip": 5.0,
+      "inner_lr": 0.01,
+      "inner_steps": 1,
+      "meta_batch": 10,
+      "outer_lr": 0.001,
+      "stage1_epochs": 2,
+      "stage2_epochs": 2,
+      "weight_decay": 0.0
+    },
+    "model": {
+      "hidden_dim": 8,
+      "num_hidden": 2,
+      "output_activation": "softplus"
+    },
+    "output_dir": "outputs/synthetic",
+    "plot_dir": "outputs/synthetic/plots",
+    "seed": 42,
+    "splits": {
+      "test": 3,
+      "train": 6,
+      "val": 3
+    }
+  },
+  "dataset_filename": "transactions.csv",
+  "dataset_sha256": "d879c1730b39aedf0b7aac8778a4bbee0609c702c5e4f357ba081ce4cfb46c42",
+  "evaluation_protocol": "product-disjoint, full-curve interpolation and normalization before support/query split",
+  "source_sha256": {
+    "main.py": "d902a8ac0bce7e359f17b086753af33222114ec693b0022943cf43cfb294155a",
+    "metaprice/__init__.py": "bdb830aadf96cb4832e34714ce934d5b1eb7d5aa9d002a190e13302d08f4cfc8",
+    "metaprice/baselines.py": "2d5cead4cdc2a001cec1258617645ddbed973f3f8f2fa501c8325c70e0315ce9",
+    "metaprice/config.py": "7c1882976f6bdf16e054ff2e1e23b1631743909ef4a6f458e6c7066119fde98d",
+    "metaprice/dataset.py": "b7aa54d6b965cce0eeb965b5dae45e69291b92ff886eb12dce900a520dd81cd8",
+    "metaprice/evaluate.py": "215e49752c3fb92a4db7b48de3ab77fb53d657b20cd5cc39fc5044b4ac66dc68",
+    "metaprice/hierarchy.py": "1de20becd1c71fe5a9b5ec1776aa7ac48602e2150095a31701a001bb3310a0ee",
+    "metaprice/inference.py": "245f43c5dc5f5d57c2daf841021eb0f790413498f93e2c198d834d90962507bf",
+    "metaprice/meta_learning.py": "e1dc192cced2fba3a80ccece7e008757402d4231318567f4d1029f9174f91036",
+    "metaprice/models.py": "03ca95e582345633c3d54dd43136bf2adf57c1ee8fd630a1c520775ab1d5dcee",
+    "metaprice/plots.py": "301a0b1f246abad07ffdce935e951b437be53399712f3932a946cd41afd18bf3",
+    "metaprice/preprocessing.py": "a3f38c8f6c4f5e6b70cc5a7d8ad50d4ab22b994b8e4f8c7dc070a50790189ed6",
+    "metaprice/seed.py": "5a533d87482e667c7f990fd57e034a28d4d999600e6acad1a698971989492283",
+    "metaprice/task_builder.py": "26ce63085b0a8994f2cf77114eb63e5fa88da9bd328086aadf34a73bb16f2afd",
+    "metaprice/trainer.py": "8723f702b038cc20bc1c4390dbe886559f9464937bde67135498ff063be83d6e",
+    "metaprice/utils.py": "48dcd2adbc376360f41e67021c28757e9d0d9fe172f23369118316b8644c3136"
+  },
+  "splits": {
+    "test": [
+      "P5",
+      "P11",
+      "P4"
+    ],
+    "train": [
+      "P8",
+      "P7",
+      "P0",
+      "P6",
+      "P3",
+      "P10"
+    ],
+    "validation": [
+      "P1",
+      "P9",
+      "P2"
+    ]
+  }
+}
