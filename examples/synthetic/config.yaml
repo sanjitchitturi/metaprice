@@ -1,0 +1,53 @@
+baselines:
+  maml:
+    epochs: 2
+    inner_lr: 0.01
+    inner_steps: 1
+    meta_batch: 10
+    outer_lr: 0.001
+  multitask:
+    epochs: 2
+    finetune_lr: 0.01
+    finetune_steps: 5
+    lr: 0.001
+  transfer:
+    finetune_lr: 0.001
+    finetune_steps: 10
+data:
+  min_pairs: 3
+  num_points: 50
+  support_size: 5
+device: cpu
+hierarchy:
+  categories:
+  - Electronics
+  - Storage
+  - Stationery
+  - Decorations
+  - General
+  elasticity:
+    high_threshold: -0.5
+    low_threshold: -0.2
+  price_tiers:
+    budget_max: 2.0
+    midrange_max: 5.0
+meta:
+  grad_clip: 5.0
+  inner_lr: 0.01
+  inner_steps: 1
+  meta_batch: 10
+  outer_lr: 0.001
+  stage1_epochs: 2
+  stage2_epochs: 2
+  weight_decay: 0.0
+model:
+  hidden_dim: 8
+  num_hidden: 2
+  output_activation: softplus
+output_dir: outputs/synthetic
+plot_dir: outputs/synthetic/plots
+seed: 42
+splits:
+  test: 3
+  train: 6
+  val: 3
